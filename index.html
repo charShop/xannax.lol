@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xanax user *snorts*</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Khitan+Small+Script&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #000;
+            color: #fff;
+            font-family: 'Segoe UI Historic', sans-serif;
+            text-align: center;
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            background-image: url('logo.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .title {
+            margin-top: 20px;
+            font-size: 48px;
+        }
+        h5 {
+            color: #ffffff73;
+        }
+
+        .subtitle {
+            margin-top: 10px;
+            font-size: 20px;
+            color: #ccc;
+            text-transform: lowercase;
+            font-style: italic;
+        }
+
+        a {
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+        }
+        .xan {
+            color: #d32a2a66;
+            
+        }
+            .xan:hover {
+                color: #d32a2a50;
+            }
+            a:hover {
+                color: #a4a4a4;
+            }
+    </style>
+</head>
+<body>
+    <div class="logo"></div>
+    <div class="title">selling your soul for what?</div>
+    <div class="subtitle" id="subtitle">' ' those who give up on the present, never succeed in the future ' '</div>
+    <p>
+        <a href="https://xan.ax/"> Xan.ax</a> &
+        <a href="https://www.youtube.com/watch?v=_dL3AygsCMc">betrayed</a>
+    </p>
+    <h5>放弃吧, <a href="https://en.wikipedia.org/wiki/Lil_Xan" class="xan">利尔·桑</a>, 你的职业生涯一开始就已经结束了..</h5>
+    <p></p>
+</body>
+<script>
+    const titleText = "sogfjhfgdhfg9hg43gfiohjfhierdgkfgh29309fduf0joihjer5iohdf8ghrdsg";
+    let currentIndex = 0;
+
+    function animateTitle() {
+        document.title = titleText.substring(currentIndex, titleText.length)
+            + " "
+            + titleText.substring(0, currentIndex);
+        currentIndex = (currentIndex + 1) % titleText.length;
+
+        setTimeout(animateTitle, 30);
+    }
+
+    window.onload = animateTitle;
+    const subelement = document.getElementById('subtitle');
+    const subtitleText = subelement.textContent;
+
+    function trippyOnThatXan() {
+        const randomIndex = Math.floor(Math.random() * subtitleText.length);
+        const xanText = subtitleText
+            .split('')
+            .map((char, index) => index === randomIndex ?
+                `<span style="display:inline-block;transform:scale(1.2);color:#ff4444;">${char}</span>`
+                : char)
+            .join('');
+
+        subelement.innerHTML = xanText;
+
+        setTimeout(() => {
+            subelement.innerHTML = subtitleText;
+        }, 100);
+    }
+
+    setInterval(trippyOnThatXan, 75);
+</script>
+</html>
